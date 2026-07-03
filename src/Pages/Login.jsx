@@ -33,7 +33,7 @@ function Login() {
     if (!validate()) return;
 
     try {
-      const res = await axios.get(`http://localhost:3001/users?email=${email}`);
+      const res = await axios.get(`https://eaducase-popx-backend.onrender.com?email=${email}`);
 
       if (res.data.length === 0) {
         alert("Account not found");

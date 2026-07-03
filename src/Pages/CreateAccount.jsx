@@ -75,7 +75,7 @@ function CreateAccount() {
 
         try {
             const emailRes = await axios.get(
-                `http://localhost:3001/users?email=${form.email}`
+                `https://eaducase-popx-backend.onrender.com?email=${form.email}`
             );
 
             if (emailRes.data.length > 0) {
@@ -84,7 +84,7 @@ function CreateAccount() {
             }
 
             const phoneRes = await axios.get(
-                `http://localhost:3001/users?phone=${form.phone}`
+                `https://eaducase-popx-backend.onrender.com?phone=${form.phone}`
             );
 
             if (phoneRes.data.length > 0) {
@@ -92,7 +92,7 @@ function CreateAccount() {
                 return;
             }
 
-            await axios.post("http://localhost:3001/users", form);
+            await axios.post("https://eaducase-popx-backend.onrender.com", form);
 
             alert("Account Created Successfully");
 
