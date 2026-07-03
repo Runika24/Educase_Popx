@@ -1,0 +1,108 @@
+.account-page{
+    width:100%;
+    height:100%;
+    background:#e9ebee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.account-card{
+    width:100%;
+    max-width:340px;
+    height:700px;
+    background:#f7f8f9;
+    border-radius:16px;
+    border:1px solid #e2e5e8;
+    overflow-y:auto;
+}
+
+.account-header{
+    background:#fff;
+    padding:18px;
+    border-bottom:1px solid #ddd;
+}
+
+.account-header h2{
+    font-size:22px;
+    color:#1d2226;
+}
+
+.profile-section{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    background:#fff;
+    padding:20px;
+}
+
+.profile-image{
+    position:relative;
+}
+
+.profile-image img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.camera-icon{
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#6c25ff;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.profile-details h3{
+    margin-bottom:5px;
+}
+
+.profile-details p{
+    color:#666;
+    margin-bottom:4px;
+}
+
+.profile-details span{
+    color:#6c25ff;
+}
+
+.about-section{
+    background:#fff;
+    margin-top:15px;
+    padding:20px;
+    line-height:26px;
+    color:#555;
+}
+
+.info-box{
+    background:#fff;
+    margin-top:15px;
+    padding:20px;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.logout-btn{
+    width:90%;
+    margin:25px auto;
+    display:block;
+    height:48px;
+    border:none;
+    border-radius:8px;
+    background:#6c25ff;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}

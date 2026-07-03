@@ -1,0 +1,78 @@
+.welcome-page{
+    width:100%;
+    height:100%;
+    background:#f7f8f9;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 340px;
+    height: 700px;
+    background: #f7f8f9;
+    border: 1px solid #e2e5e8;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.illustration-area {
+    flex: 1 1 63%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px 0;
+}
+
+.illustration-area img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.bottom-content {
+    padding: 16px 20px 30px;
+}
+
+.bottom-content h1 {
+    font-size: 26px;
+    color: #1d2226;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.bottom-content p {
+    font-size: 15px;
+    color: #8a8a8a;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.create-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #6c25ff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.create-btn:hover { background: #5820d6; }
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #cebafb;
+    color: #1d2226;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-btn:hover { background: #c2a7fa; }

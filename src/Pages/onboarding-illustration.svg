@@ -1,0 +1,42 @@
+<svg width="320" height="360" viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="160" cy="330" rx="120" ry="14" fill="#efeafd"/>
+
+  <circle cx="245" cy="70" r="34" fill="#f3edff"/>
+  <circle cx="55" cy="110" r="20" fill="#fdeee6"/>
+
+  <rect x="70" y="60" width="150" height="200" rx="16" fill="#ffffff" stroke="#e4dcfa" stroke-width="2"/>
+
+  <rect x="90" y="82" width="60" height="10" rx="5" fill="#6c25ff"/>
+  <rect x="90" y="100" width="110" height="7" rx="3.5" fill="#e7e1fb"/>
+  <rect x="90" y="114" width="90" height="7" rx="3.5" fill="#e7e1fb"/>
+
+  <rect x="90" y="136" width="110" height="60" rx="10" fill="#f3edff"/>
+  <circle cx="115" cy="166" r="14" fill="#c9b8fb"/>
+  <rect x="138" y="156" width="50" height="7" rx="3.5" fill="#c9b8fb"/>
+  <rect x="138" y="170" width="35" height="7" rx="3.5" fill="#ddd2fb"/>
+
+  <rect x="90" y="208" width="110" height="34" rx="8" fill="#6c25ff"/>
+  <rect x="115" y="221" width="60" height="8" rx="4" fill="#ffffff"/>
+
+  <g>
+    <circle cx="222" cy="200" r="30" fill="#ffb199"/>
+    <path d="M198 226 Q222 206 246 226 L246 260 Q222 274 198 260 Z" fill="#ff7a59"/>
+    <circle cx="213" cy="196" r="4" fill="#4a1b0c"/>
+    <circle cx="231" cy="196" r="4" fill="#4a1b0c"/>
+    <path d="M212 210 Q222 216 232 210" stroke="#4a1b0c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <circle cx="55" cy="230" r="26" fill="#ffd9a0"/>
+    <path d="M33 252 Q55 236 77 252 L77 282 Q55 294 33 282 Z" fill="#6c25ff"/>
+    <circle cx="47" cy="226" r="3.5" fill="#4a1b0c"/>
+    <circle cx="63" cy="226" r="3.5" fill="#4a1b0c"/>
+    <path d="M46 238 Q55 244 64 238" stroke="#4a1b0c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <circle cx="90" cy="70" r="5" fill="#ffb199"/>
+  <circle cx="260" cy="150" r="6" fill="#c9b8fb"/>
+  <circle cx="240" cy="290" r="5" fill="#ffd9a0"/>
+  <path d="M30 180 l8 0 M34 176 l0 8" stroke="#c9b8fb" stroke-width="2" stroke-linecap="round"/>
+  <path d="M270 100 l8 0 M274 96 l0 8" stroke="#ffb199" stroke-width="2" stroke-linecap="round"/>
+</svg>
