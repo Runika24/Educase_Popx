@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CreateAccount.css";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 const API = "https://eaducase-popx-backend.onrender.com/users";
 
 function CreateAccount() {
@@ -72,6 +73,8 @@ function CreateAccount() {
     const createAccount = async (e) => {
         e.preventDefault();
 
+        console.log("Create Account Clicked");
+
         if (!validate()) return;
 
         try {
@@ -96,11 +99,10 @@ function CreateAccount() {
             await axios.post(API, form);
 
             alert("Account Created Successfully");
-
             navigate("/login");
 
         } catch (error) {
-            console.log(error);
+            console.error(error);
             alert("Server Error");
         }
     };
@@ -113,13 +115,15 @@ function CreateAccount() {
 
                 <form onSubmit={createAccount}>
 
-                    <div className="input-group">
-                        <label>Full Name *</label>
+                    <fieldset className="input-fieldset">
+                        <legend>
+                            Full Name <span>*</span>
+                        </legend>
 
                         <input
                             type="text"
                             name="fullName"
-                            placeholder="Enter full name"
+                            placeholder="Marry Doe"
                             value={form.fullName}
                             onChange={handleChange}
                         />
@@ -127,15 +131,19 @@ function CreateAccount() {
                         {errors.fullName && (
                             <span className="error">{errors.fullName}</span>
                         )}
-                    </div>
+                    </fieldset>
 
-                    <div className="input-group">
-                        <label>Phone Number *</label>
+                    <fieldset className="input-fieldset">
+                        <legend>
+                            Phone Number <span>*</span>
+                        </legend>
 
                         <input
-                            type="text"
+                            type="tel"
+                            inputMode="numeric"
+                            maxLength={10}
                             name="phone"
-                            placeholder="Enter phone number"
+                            placeholder="MarryDoe"
                             value={form.phone}
                             onChange={handleChange}
                         />
@@ -143,15 +151,17 @@ function CreateAccount() {
                         {errors.phone && (
                             <span className="error">{errors.phone}</span>
                         )}
-                    </div>
+                    </fieldset>
 
-                    <div className="input-group">
-                        <label>Email Address *</label>
+                    <fieldset className="input-fieldset">
+                        <legend>
+                            Email Address <span>*</span>
+                        </legend>
 
                         <input
                             type="email"
                             name="email"
-                            placeholder="Enter email address"
+                            placeholder="MarryDoe@gmail.com"
                             value={form.email}
                             onChange={handleChange}
                         />
@@ -159,17 +169,18 @@ function CreateAccount() {
                         {errors.email && (
                             <span className="error">{errors.email}</span>
                         )}
-                    </div>
+                    </fieldset>
 
-                    <div className="input-group">
-                        <label>Password *</label>
+                    <fieldset className="input-fieldset">
+                        <legend>
+                            Password <span>*</span>
+                        </legend>
 
                         <div className="password-wrapper">
-
                             <input
                                 type={showPassword ? "text" : "password"}
                                 name="password"
-                                placeholder="Enter password"
+                                placeholder="********"
                                 value={form.password}
                                 onChange={handleChange}
                             />
@@ -179,23 +190,24 @@ function CreateAccount() {
                                 className="toggle-password"
                                 onClick={() => setShowPassword(!showPassword)}
                             >
-                                {showPassword ? "🙈" : "👁"}
+                                {showPassword ? <FiEyeOff /> : <FiEye />}
                             </button>
-
                         </div>
 
                         {errors.password && (
                             <span className="error">{errors.password}</span>
                         )}
-                    </div>
+                    </fieldset>
 
-                    <div className="input-group">
-                        <label>Company Name *</label>
+                    <fieldset className="input-fieldset">
+                        <legend>
+                            Company Name <span>*</span>
+                        </legend>
 
                         <input
                             type="text"
                             name="company"
-                            placeholder="Enter company name"
+                            placeholder="Marry Doe"
                             value={form.company}
                             onChange={handleChange}
                         />
@@ -203,66 +215,46 @@ function CreateAccount() {
                         {errors.company && (
                             <span className="error">{errors.company}</span>
                         )}
-                    </div>
+                    </fieldset>
 
                     <div className="agency-section">
+                        <p>
+                            Are you an Agency?<span>*</span>
+                        </p>
 
-                        <p>Are you an Agency? *</p>
+                        <div className="radio">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="agency"
+                                    value="Yes"
+                                    checked={form.agency === "Yes"}
+                                    onChange={handleChange}
+                                />
+                                Yes
+                            </label>
 
-                        <label>
-                            <input
-                                type="radio"
-                                name="agency"
-                                value="Yes"
-                                checked={form.agency === "Yes"}
-                                onChange={handleChange}
-                            />
-                            Yes
-                        </label>
-
-                        <label>
-                            <input
-                                type="radio"
-                                name="agency"
-                                value="No"
-                                checked={form.agency === "No"}
-                                onChange={handleChange}
-                            />
-                            No
-                        </label>
-
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="agency"
+                                    value="No"
+                                    checked={form.agency === "No"}
+                                    onChange={handleChange}
+                                />
+                                No
+                            </label>
+                        </div>
                     </div>
 
                     <div className="button-group">
-
-                        <button
-                            type="button"
-                            className="cancel-btn"
-                            onClick={() => {
-                                setForm({
-                                    fullName: "",
-                                    phone: "",
-                                    email: "",
-                                    password: "",
-                                    company: "",
-                                    agency: "Yes",
-                                });
-
-                                navigate("/");
-                            }}
-                        >
-                            Cancel
-                        </button>
-
                         <button
                             type="submit"
                             className="create-btn"
                         >
                             Create Account
                         </button>
-
                     </div>
-
                 </form>
 
             </div>

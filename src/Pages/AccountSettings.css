@@ -1,108 +1,164 @@
-.account-page{
-    width:100%;
-    height:100%;
-    background:#e9ebee;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-.account-card{
-    width:100%;
-    max-width:340px;
-    height:700px;
-    background:#f7f8f9;
-    border-radius:16px;
-    border:1px solid #e2e5e8;
-    overflow-y:auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.account-header{
-    background:#fff;
-    padding:18px;
-    border-bottom:1px solid #ddd;
+body {
+    background: #f7f8f9;
 }
 
-.account-header h2{
-    font-size:22px;
-    color:#1d2226;
+.account-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #f7f8f9;
 }
 
-.profile-section{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    background:#fff;
-    padding:20px;
+.account-card {
+    width: 375px;
+    max-width: 100%;
+    height: 43.2rem;
+    background: #f7f8f9;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    overflow: hidden;
 }
 
-.profile-image{
-    position:relative;
+.account-header {
+    height: 68px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    border-bottom: 1px solid #ececec;
 }
 
-.profile-image img{
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    object-fit:cover;
+.account-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1d2226;
 }
 
-.camera-icon{
-    position:absolute;
-    right:0;
-    bottom:0;
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    background:#6c25ff;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.profile-section {
+    background: #f7f8f9;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 18px 18px;
 }
 
-.profile-details h3{
-    margin-bottom:5px;
+.profile-image {
+    position: relative;
 }
 
-.profile-details p{
-    color:#666;
-    margin-bottom:4px;
+.profile-image img {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.profile-details span{
-    color:#6c25ff;
+.camera-icon {
+    position: absolute;
+    right: -2px;
+    bottom: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #6C25FF;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
 }
 
-.about-section{
-    background:#fff;
-    margin-top:15px;
-    padding:20px;
-    line-height:26px;
-    color:#555;
+.profile-details {
+    margin-top: 4px;
 }
 
-.info-box{
-    background:#fff;
-    margin-top:15px;
-    padding:20px;
+.profile-details h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1D2226;
+    margin-bottom: 4px;
 }
 
-.row{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:15px;
+.profile-details p {
+    font-size: 14px;
+    color: #3b3b3b;
+    font-weight: 500;
 }
 
-.logout-btn{
-    width:90%;
-    margin:25px auto;
-    display:block;
-    height:48px;
-    border:none;
-    border-radius:8px;
-    background:#6c25ff;
-    color:#fff;
-    font-size:16px;
-    cursor:pointer;
+.about-section {
+    padding: 0 18px 18px;
+}
+
+.about-section p {
+    font-size: 14px;
+    color: #555;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.dashed-line {
+    border-top: 1px dashed #d9d9d9;
+    margin: 0 0 12px;
+}
+
+.bottom-space {
+    height: 430px;
+}
+
+.bottom-dashed {
+    border-top: 1px dashed #d9d9d9;
+}
+
+
+.empty-space {
+    height: 320px;
+}
+
+.button-group {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+       bottom: 8px;
+}
+
+.logout-btn {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background: #6C25FF;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.logout-btn:hover {
+    background: #5b1fe5;
+}
+
+.logout-btn:active {
+    transform: scale(0.98);
 }

@@ -26,63 +26,59 @@ function AccountSettings() {
 
   if (!user) return null;
 
-return (
-  <div className="account-page">
-    <div className="account-card">
+  return (
+    <div className="account-page">
+      <div className="account-card">
 
-      <div className="account-header">
-        <h2>Account Settings</h2>
-      </div>
+        <div className="account-header">
+          <h2>Account Settings</h2>
+        </div>
 
-      <div className="profile-section">
-        <div className="profile-image">
-          <img
-            src="https://i.pravatar.cc/150?img=32"
-            alt="profile"
-          />
+        <div className="profile-section">
 
-          <div className="camera-icon">
-            <FaCamera />
+          <div className="profile-image">
+            <img
+              src="https://i.pravatar.cc/150?img=32"
+              alt="Profile"
+            />
+
+            <div className="camera-icon">
+              <FaCamera size={10} />
+            </div>
           </div>
+
+          <div className="profile-details">
+            <h3>{user.fullName}</h3>
+            <p>{user.email}</p>
+          </div>
+
         </div>
 
-        <div className="profile-details">
-          <h3>{user.fullName}</h3>
-          <p>{user.email}</p>
-          <span>{user.company}</span>
+        <div className="about-section">
+          <p>
+            Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr,
+            Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore
+            Magna Aliquyam Erat, Sed Diam.
+          </p>
         </div>
+
+        <div className="dashed-line"></div>
+
+        <div className="empty-space"></div>
+
+        <div className="dashed-line"></div>
+     <div className="button-group">
+        <button
+          className="logout-btn"
+          onClick={logout}
+        >
+          Logout
+        </button>
       </div>
-
-      <div className="about-section">
-        <p>
-          Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr,
-          Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore
-          Magna Aliquyam Erat, Sed Diam.
-        </p>
       </div>
-
-      <div className="info-box">
-        <div className="row">
-          <span>Phone</span>
-          <strong>{user.phone}</strong>
-        </div>
-
-        <div className="row">
-          <span>Agency</span>
-          <strong>{user.agency}</strong>
-        </div>
-      </div>
-
-      <button
-        className="logout-btn"
-        onClick={logout}
-      >
-        Logout
-      </button>
-
+ 
     </div>
-  </div>
-);
+  );
 }
 
 export default AccountSettings;
