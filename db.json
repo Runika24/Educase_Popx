@@ -18,6 +18,6 @@
       "agency": "Yes",
       "id": "L6dM9EedB2c"
     }
-  ]
- 
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
