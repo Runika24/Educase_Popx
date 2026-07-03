@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
+const API = "https://eaducase-popx-backend.onrender.com/users";
+
 
 function Login() {
   const navigate = useNavigate();
@@ -33,7 +35,9 @@ function Login() {
     if (!validate()) return;
 
     try {
-      const res = await axios.get(`https://eaducase-popx-backend.onrender.com?email=${email}`);
+     const res = await axios.get(
+`${API}?email=${encodeURIComponent(email)}`
+);
 
       if (res.data.length === 0) {
         alert("Account not found");

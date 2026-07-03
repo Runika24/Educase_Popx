@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CreateAccount.css";
+const API = "https://eaducase-popx-backend.onrender.com/users";
 
 function CreateAccount() {
     const navigate = useNavigate();
@@ -75,7 +76,7 @@ function CreateAccount() {
 
         try {
             const emailRes = await axios.get(
-                `https://eaducase-popx-backend.onrender.com?email=${form.email}`
+                `${API}?email=${encodeURIComponent(form.email)}`
             );
 
             if (emailRes.data.length > 0) {
@@ -84,7 +85,7 @@ function CreateAccount() {
             }
 
             const phoneRes = await axios.get(
-                `https://eaducase-popx-backend.onrender.com?phone=${form.phone}`
+                `${API}?phone=${encodeURIComponent(form.phone)}`
             );
 
             if (phoneRes.data.length > 0) {
@@ -92,7 +93,7 @@ function CreateAccount() {
                 return;
             }
 
-            await axios.post("https://eaducase-popx-backend.onrender.com", form);
+            await axios.post(API, form);
 
             alert("Account Created Successfully");
 
