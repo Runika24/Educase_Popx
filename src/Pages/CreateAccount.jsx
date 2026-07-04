@@ -71,16 +71,16 @@ function CreateAccount() {
         <div className="create-page">
             <div className="create-container">
 
-              <div className="page-nav">
-    <button
-        className="nav-back-btn"
-        onClick={() => navigate(-1)}
-        aria-label="go back"
-    >
-        <FiArrowLeft size={14} />
-    </button>
+                <div className="page-nav">
+                    <button
+                        className="nav-back-btn"
+                        onClick={() => navigate(-1)}
+                        aria-label="go back"
+                    >
+                        <FiArrowLeft size={14} />
+                    </button>
 
-<h5 className="page-title">Create your PopX account</h5></div>
+                    <h5 className="page-title">Create your PopX account</h5></div>
 
                 <form onSubmit={createAccount}>
 

@@ -30,9 +30,7 @@ function AccountSettings() {
             <FiArrowLeft size={16} />
           </button>
           <h2>Account Settings</h2>
-          <button className="nav-home-btn" onClick={() => navigate("/")} aria-label="go home">
-            <FiHome size={16} />
-          </button>
+       
         </div>
 
         <div className="profile-section">
